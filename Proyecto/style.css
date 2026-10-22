@@ -1,22 +1,84 @@
+/* 1. VARIABLES Y ESTILOS GLOBALES */
+:root {
+    --bg: #0f0f0f
+    --surface: #1e293b
+    --primary: #06b6d4
+    --text: #f8fafc
+    -- muted: #949494
+    --radius: irem;
+
+
+}
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+html{
+scroll-behavior: smooth;
+ 
+}
+
 body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg) ;
+    color: var(--text);
+    line-height: 1.6;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
+.container{
+
+    width: 90%;
+    max-width: 110px;
+    margin: 0 auto;
+}
+
+section{
+scroll-margin-top: 5.625rem;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Pantalla de carga */
+
+.loader{
+   position: fixed;
+   inset:0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: var(--bg);
+   z-index: 9999;
+
+   opacity: 1;
+   visibility: visible;
+
+   transition: opacity 700ms ease, visibility 700ms ease;
+
+}
 .loading {
-    max-width: 50%;
+    width: 85%;
+    max-width: 25rem;
     line-height: 1.4;
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
 }
+.loading h2{
+    font-size: 1.5rem;
+    margin-bottom:0.625rem;
 
+}
 .loading__author {
     font-weight: normal;
     font-size: 0.9rem;
-    color: rgba(141, 141, 193, 1);
+    color: var(--muted);
     margin: 0.6rem 0 2rem 0;
     display: block;
 }
